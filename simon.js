@@ -10,7 +10,6 @@ let start = document.getElementById("start");
 let info = document.getElementById("info");
 let strict = document.getElementById("strict");
 let easy = document.getElementById("easy");
-// let restartBtn = document.getElementById("restart")
 
 let round = 0;
 
@@ -98,7 +97,6 @@ function startGame(){
 start.onclick = startGame
 
 strict.onclick = function gameMode() {
-	// info.classList.add("strict");
 	info.classList.remove("easy");
 	reset()
 	simonTurn();
@@ -170,7 +168,6 @@ async function simonTurn() {
 
 	changeText(info, `Simon's Turn round: ${simon.length}`);
 	cycle(simon);
-	//Problem
 	round++;
 
 	await sleep(simon.length * 500);
